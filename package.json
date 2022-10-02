@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "node-fetch": "^3.2.10"
-  }
+  },
+  "name": "midsemester-project",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joannacheng21/Midsemester-Project.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joannacheng21/Midsemester-Project/issues"
+  },
+  "homepage": "https://github.com/joannacheng21/Midsemester-Project#readme",
+  "description": ""
 }
