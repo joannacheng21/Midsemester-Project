@@ -71,7 +71,7 @@ body {
     margin-top: 1.2em;
 }
 
-.lrbutton {
+.lrbutton{
     border-style: none;
     background-color: #E8E8E8;
     font-size: 3em;
@@ -81,4 +81,45 @@ body {
 
 .lrbuttonimg {
     width: 1em;
+}
+
+#rightcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12em;
+}
+
+#infoheader {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.7em;
+    margin-top: 0em;
+    margin-bottom: 0.8em;
+}
+
+#info {
+    background-color: #E8E8E8;
+    padding: 0em 4em 7em 1.5em;
+    margin-bottom: 2em;
+}
+
+#infotext {
+    font-family: 'Inter';
+    font-size: 1.5em;
+}
+
+.tabbtn {
+    font-family: 'Inter';
+    border-style: none;
+    background-color: #E8E8E8;
+    font-size: 1.5em;
+    border-radius: 0.3em;
+    padding: 0.3em 0em 0.3em 0em;
+    width: 4.5em;
+    margin: 0em 0.5em;
+}
+
+#infobtn {
+    background-color: #7CFF79;
 }
