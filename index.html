@@ -4,40 +4,44 @@
     <head>
         <title>Pokedex</title>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="header">
             <p id="title">Bits of Good Mid-Semester Project</p>
         </div>
-        <div id="leftcol">
-            <div id="picture">
-                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Pokemon image">
+        <div id="columns">
+            <div id="leftcol">
+                <img id="picture" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Pokemon image">
+                <p id="nametext">bulbasaur</p>
+                <p id="typeheader">Types:</p>
+                <div id="types">
+                    <p class="type">normal</p>
+                    <p class="type">normal</p>
+                </div>
+                <div id="arrows">
+                    <button class="lrbutton" type="button"><img class="lrbuttonimg" src="https://johong.com.sg/image/catalog/Slice/general/slide-arrow-left.png" alt="Left arrow"></button>
+                    <button class="lrbutton" type="button"><img class="lrbuttonimg" src="https://johong.com.sg/image/catalog/Slice/general/slide-arrow-right.png" alt="rightarrow"></button>
+                </div>
             </div>
-            <div id="namebox">
-                <p id="nametext">Bulbasaur</p>
-            </div>
-            <div id="types">
-                <p class="type">normal</p>
-            </div>
-            <div id="arrows">
-                <button type="button">&lt</button>
-            </div>
-        </div>
-        <div id="rightcol">
-            <p id="infoheader">Info</p>
-            <div id="info">
-                height: 0.3m <br>
-                weight: 0.4kg <br>
-                hp: 48 <br>
-                attack: 48 <br>
-                defense: 48 <br>
-                special-attack: 48 <br>
-                special-defense: 48 <br>
-                speed: 48
-            </div>
-            <div id="tabbuttons">
-                <button type="button">Info</button>
-                <button type="button">Moves</button>
+            <div id="rightcol">
+                <p id="infoheader">Info</p>
+                <div id="info">
+                    height: 0.3m <br>
+                    weight: 0.4kg <br>
+                    hp: 48 <br>
+                    attack: 48 <br>
+                    defense: 48 <br>
+                    special-attack: 48 <br>
+                    special-defense: 48 <br>
+                    speed: 48
+                </div>
+                <div id="tabbuttons">
+                    <button type="button">Info</button>
+                    <button type="button">Moves</button>
+                </div>
             </div>
         </div>
     </body>
