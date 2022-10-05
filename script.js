@@ -29,6 +29,7 @@ infoBtn.addEventListener("click", (e) => {
     document.getElementById("infotext").textContent = infomoves[0];
     document.getElementById("infobtn").style.backgroundColor = "#7CFF79";
     document.getElementById("movesbtn").style.backgroundColor = "#E8E8E8";
+    document.getElementById("infoheader").textContent = "Info";
     infoBoxStatus = 0;
 });
 movesBtn.addEventListener("click", (e) => {
@@ -36,6 +37,7 @@ movesBtn.addEventListener("click", (e) => {
     document.getElementById("infotext").textContent = infomoves[1];
     document.getElementById("infobtn").style.backgroundColor = "#E8E8E8";
     document.getElementById("movesbtn").style.backgroundColor = "#7CFF79";
+    document.getElementById("infoheader").textContent = "Moves";
     infoBoxStatus = 1;
 });
 
@@ -76,10 +78,14 @@ function fetchPokemonData(pokemonIndex) {
         data["moves"].forEach(e => moves += e["move"]["name"] + "\r\n");
         infomoves = [stats, moves];
 
-        if(infoBoxStatus == 0)
+        if(infoBoxStatus == 0) {
             infoTextbox.textContent = stats;
-        else
+            document.getElementById("infoheader").textContent = "Info";
+        }
+        else {
             infoTextbox.textContent = moves;
+            document.getElementById("infoheader").textContent = "Moves";
+        }
     });
 }
 
