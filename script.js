@@ -5,6 +5,7 @@ let currPokemon = 1;
 const typeColors = {"normal":"#A8A77A", "fire":"#EE8130", "water":"#6390F0", "electric":"#F7D02C", "grass":"#7AC74C", "ice":"#96D9D6", "fighting":"#C22E28", "poison":"#A33EA1", "ground":"#E2BF65", "flying":"#A98FF3", "psychic":"#F95587", "bug":"#A6B91A", "rock":"#B6A136", "ghost":"#735797", "dragon":"#6F35FC", "dark":"#705746", "steel":"#B7B7CE", "fairy":"#D685AD"};
 
 let infomoves = [];
+let infoBoxStatus = 0;
 
 leftBtn = document.getElementById("lbutton");
 rightBtn = document.getElementById("rbutton");
@@ -28,12 +29,14 @@ infoBtn.addEventListener("click", (e) => {
     document.getElementById("infotext").textContent = infomoves[0];
     document.getElementById("infobtn").style.backgroundColor = "#7CFF79";
     document.getElementById("movesbtn").style.backgroundColor = "#E8E8E8";
+    infoBoxStatus = 0;
 });
 movesBtn.addEventListener("click", (e) => {
     //set moves
     document.getElementById("infotext").textContent = infomoves[1];
     document.getElementById("infobtn").style.backgroundColor = "#E8E8E8";
     document.getElementById("movesbtn").style.backgroundColor = "#7CFF79";
+    infoBoxStatus = 1;
 });
 
 function fetchPokemonData(pokemonIndex) {
@@ -67,12 +70,16 @@ function fetchPokemonData(pokemonIndex) {
         data["stats"].forEach(e => stats += e["stat"]["name"] + ": " + e["base_stat"] + "\r\n");
         const infoTextbox = document.getElementById("infotext");
         infoTextbox.setAttribute('style', 'white-space: pre;');
-        infoTextbox.textContent = stats;
 
         //save moves
         moves = "";
         data["moves"].forEach(e => moves += e["move"]["name"] + "\r\n");
         infomoves = [stats, moves];
+
+        if(infoBoxStatus == 0)
+            infoTextbox.textContent = stats;
+        else
+            infoTextbox.textContent = moves;
     });
 }
 
